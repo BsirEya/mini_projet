@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulateur de réservation Cap Bon Explorer : calcul du prix et vérification du formulaire.">
+    <title>Cap Bon Explorer - Réservation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <!--entete-->
+    <header class="entete">
+        <div class="photo">
+            <a href="index.html">
+                <img src="images/logo.jpg" id="logo" alt="cap bon">
+            </a>
+            <span class="titre">Cap Bon Explorer</span>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="activites.html">Activités</a>
+                <a href="agenda.html">Agenda</a>
+                <a href="reservation.html" class="actif">Réservation</a>
+                <a href="contact.html">Contact / FAQ</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container py-4">
+        <h1 class="t2">Simulateur de réservation</h1>
+        <p class="text-center">Remplissez le formulaire pour estimer le prix de votre expérience. Il s'agit d'une simulation : aucun paiement n'est demandé et aucune donnée n'est envoyée.</p>
+        <form id="form-reservation" novalidate>
+            <div class="row g-4">
+                <div class="col-lg-8">
+                    <fieldset class="cadre">
+                        <legend>Vos coordonnées</legend>
+                        <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="nom" class="form-label">Nom</label>
+                        <input type="text" id="nom" name="nom" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="prenom" class="form-label">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Adresse e-mail</label>
+                        <input type="email" id="email" name="email" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="telephone" class="form-label">Téléphone</label>
+                        <input type="tel" id="telephone" name="telephone" class="form-control">
+                    </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="cadre">
+                        <legend>Votre expérience</legend>
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <label for="activite" class="form-label">Activité choisie</label>
+                                <select id="activite" name="activite" class="form-select">
+                                    <option value="">-- Choisir une activité --</option>
+                                </select>
+                            </div>
+                    <div class="col-md-6">
+                        <label for="date-souhaitee" class="form-label">Date souhaitée</label>
+                        <input type="date" id="date-souhaitee" name="date-souhaitee" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="participants" class="form-label">Nombre de participants (de 1 à 6)</label>
+                        <input type="number" id="participants" name="participants" class="form-control" min="1" max="6" value="1">
+                    </div>
+                            <div class="col-12">
+                                <p class="mb-1">Type de participation</p>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="type-individuel" name="type-participation" value="individuel" checked>
+                                    <label class="form-check-label" for="type-individuel">Individuel</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="type-famille" name="type-participation" value="famille">
+                                    <label class="form-check-label" for="type-famille">Famille</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" id="type-groupe" name="type-participation" value="groupe">
+                                    <label class="form-check-label" for="type-groupe">Groupe</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="cadre">
+                        <legend>Compléments</legend>
+                        <label for="commentaire" class="form-label">Commentaire</label>
+                        <textarea id="commentaire" name="commentaire" rows="3" class="form-control mb-3"></textarea>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="accepte" name="accepte">
+                            <label class="form-check-label" for="accepte">J'ai compris qu'il s'agit d'une simulation (aucune réservation réelle).</label>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cadre">
+                        <h2 class="h5">Prix estimé</h2>
+                        <table class="table table-striped">
+                            <tr><th>Prix unitaire</th><td><span id="prix-unitaire">0</span> TND</td></tr>
+                            <tr><th>Sous-total</th><td><span id="sous-total">0</span> TND</td></tr>
+                            <tr><th>Remise (10 % dès 4 participants)</th><td><span id="remise">0</span> TND</td></tr>
+                            <tr class="total"><th>Total final</th><td><b><span id="total">0</span> TND</b></td></tr>
+                        </table>
+                        <button type="button" id="btn-calculer" class="secondaire">Calculer / Actualiser</button>
+                        <button type="button" id="btn-valider">Valider la simulation</button>
+                        <button type="reset" id="btn-reset" class="secondaire">Réinitialiser</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="messages" class="alert alert-warning mt-4" style="display: none;"></div>
+        <div id="recapitulatif" class="alert alert-success mt-4" style="display: none;"></div>
+    </main>
+    <footer class="pied text-center py-4">
+        <p class="end">
+            <a href="index.html">Accueil</a> |
+            <a href="activites.html">Activités</a> |
+            <a href="agenda.html">Agenda</a> |
+            <a href="reservation.html">Réservation</a> |
+            <a href="contact.html">Contact/FAQ</a>
+        </p>
+        <p class="end"><a href="index.html">Retour à l'accueil</a></p>
+        <p class="mb-0">© <span id="annee">2026</span> Cap Bon Explorer - Projet pédagogique ISET Nabeul : données et tarifs fictifs.</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    <script src="js/donnees.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/reservation.js"></script>
+</body>
+</html>

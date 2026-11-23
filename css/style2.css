@@ -1,0 +1,57 @@
+/* ajout.css : styles des pages Activités, Réservation et Contact.
+   Il est chargé APRÈS Bootstrap et APRÈS style.css (qui n'est pas modifié).
+   Il réutilise les mêmes couleurs que la page d'accueil :
+   bleu nuit #0E2A47 | bleu #1D63A8 | ocre #E9A23B | terracotta #B84A2B | crème #FBF3E2 */
+
+/* ---------- Page Activités ---------- */
+.filtres {
+  background-color: #FFFDF8;
+  border: 1px solid #EBDDBE;
+  border-radius: 12px;
+  padding: 10px 15px 15px 15px;
+  margin: 0 0 15px 0;
+}
+
+/* Les cartes du catalogue sont placées par la grille Bootstrap (row / col) : on enlève le float de .carte */
+.carte-catalogue {
+  float: none;
+  width: auto;
+  margin: 0;
+}
+
+/* ---------- Formulaires (Réservation et Contact) ---------- */
+.cadre {
+  background-color: #FFFDF8;
+  border: 1px solid #EBDDBE;
+  border-radius: 12px;
+  padding: 15px;
+  margin: 0 0 20px 0;
+}
+
+legend {
+  font-size: 20px;
+  color: #0E2A47;
+}
+
+.total {
+  background-color: #F6D9A0;
+  font-weight: bold;
+}
+
+/* ---------- Boutons secondaires (les boutons principaux gardent le style de style.css) ---------- */
+.secondaire {
+  background-color: white;
+  color: #B84A2B;
+  border: 2px solid #B84A2B;
+}
+
+.secondaire:hover {
+  background-color: #B84A2B;
+  color: white;
+}
+
+/* ---------- Accordion de la FAQ ---------- */
+.accordion-button:not(.collapsed) {
+  background-color: #E3EEF8;
+  color: #0E2A47;
+}

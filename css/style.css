@@ -1,0 +1,226 @@
+body{
+    font-size: 15px;
+    color: #1c2541;
+    background-color: antiquewhite;
+    margin: 0;
+}
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #0E2A47;
+}
+.photo{
+    background-color: #f7f7ff;
+    padding-bottom: 10px 20px ;
+}
+.photo img{
+    vertical-align: middle;
+}
+#logo{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.titre{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #1c2541;
+    margin-left: 12px;
+    font-size: 25px;
+    font-weight: bold;
+}
+nav{
+    background-color: #1c2541;
+    padding: 15px;
+    align-items: center;
+}
+nav a{
+    color: #f7f7ff;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 10px 16px;
+    border-radius: 20px;
+}
+nav a:hover{
+    background-color: #5bc0de;
+    color: #1c2541;
+}
+.banniere{
+    background-image:linear-gradient(rgba(14, 42, 71, 0.55)),url("../images/maamoura.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+    text-align:center;
+    padding: 90px 20px 120px 20px;
+}
+.d1{
+    color:#f7f7ff;
+    animation:glisse 0.09s ease-out;
+}
+.d1 h1{
+    color:#f7f7ff;
+    font-size:60px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.p1{
+    color:darkorange;
+    font-size:30px;
+}
+.p2{
+    font-size: 17px;
+}
+button{
+    background-color: darkorange;
+    color: bisque;
+    font-size: 20px;
+    padding: 12px 28px;
+    margin: 10px 6px 0 6px;
+    border-radius: 30px;
+    border: none;
+}
+main{
+    text-align: center;
+    line-height: 1.5em;
+}
+.t2{
+    text-align: center;
+    color: #0E2A47;
+    text-decoration:underline #B84A2B;
+    line-height: 2em;
+}
+.carte {
+  float: left;
+  width: 20%;
+  padding: 1%;
+  margin: 1%;
+  background-color: #FFFDF8;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px #D9CBA8;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.carte:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 24px #BFAF88;
+}
+.carte-catalogue {
+  min-height: 430px;
+  animation: apparition 0.4s ease-out;
+}
+.carte-accueil {
+  min-height: 340px;
+  animation: apparition 0.7s ease-out backwards;
+}
+.image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.carte img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s;
+}
+.carte:hover img {
+  transform: scale(1.08);
+}
+.s1 {
+  background-color: #1D63A8;
+}
+.s2 {
+  background-color: #B84A2B;
+}
+.s3 {
+  background-color: #5E7B3A;
+}
+.s4 {
+  background-color: #E9A23B;
+  color: #0E2A47;
+}
+.carte h3 {
+  text-align: center;
+}
+.carte p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+.prix {
+  font-weight: bold;
+  font-size: 16px;
+  color: #B84A2B;
+}
+.nettoyage {
+  clear: both;
+}
+footer{
+  background-color: #0E2A47;
+  font-family: 'Courier New', Courier, monospace;
+  color: #f7f7ff;
+  font-size: 17px;
+}
+.end a{
+  text-decoration: none;
+  color: #BFAF88;
+}
+.th1 th{
+  background-color:#0E2A47;
+  color:#f7f7ff;
+}
+.tb1 td{
+  background-color:#dbe3fa;
+}
+.detail {
+  max-width: 600px;
+  background-color: #FFFDF8;
+  border: 2px solid #1D63A8;
+  border-radius: 14px;
+  padding: 15px 20px 20px 20px;
+  margin: 15px 0;
+  box-shadow: 0 8px 20px #BFAF88;
+}
+
+.detail h2 {
+  margin-top: 10px;
+  font-size: 26px;
+}
+
+.detail img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* ---------- 8) Tableaux ---------- */
+table {
+  width: 100%;
+  background-color: #FFFDF8;
+}
+
+caption {
+  font-weight: bold;
+  color: #0E2A47;
+  padding: 8px;
+}
+
+th {
+  background-color: #1D63A8;
+  color: #FFFFFF;
+  padding: 10px;
+  border: 1px solid #1D63A8;
+}
+
+td {
+  padding: 10px;
+  border: 1px solid #EBDDBE;
+  text-align: center;
+}
+
+.alt {
+  background-color: #E3EEF8;
+}
+.encart {
+  background-color: #E3EEF8;
+  border: 1px solid #1D63A8;
+  border-radius: 12px;
+  padding: 12px 18px;
+  margin-top: 20px;
+}
