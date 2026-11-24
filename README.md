@@ -26,5 +26,5 @@ Ouvrir `index.html` dans un navigateur. Une connexion Internet est nécessaire p
 - Données et tarifs fictifs : aucun paiement, aucune donnée envoyée.
 
 ## Sources des images
-Indiquer ici la source et la licence de chaque photo (a01 à a05, a07, a08, banniere, logo).
-a06.svg, carte.svg et les motifs sont créés pour le projet.
+Indiquer ici la source et la licence de chaque photo (a01 à a05, a07, a08,carte, banniere, logo).
+
