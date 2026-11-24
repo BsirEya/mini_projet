@@ -1,4 +1,3 @@
-/* reservation.js : simulateur de prix et contrôle du formulaire (page reservation.html) */
 let selectActivite = document.getElementById("activite");
 let champParticipants = document.getElementById("participants");
 let champDate = document.getElementById("date-souhaitee");

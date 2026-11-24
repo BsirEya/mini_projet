@@ -1,4 +1,4 @@
-/*le tableau des 8 activités (utilisé par activites.js et reservation.js) */
+/*le tableau des 8 activités(utilisé par activites.js et reservation.js)*/
 let activites = [
   {
     id: "A01",
@@ -67,7 +67,7 @@ let activites = [
     categorie: "Artisanat",
     duree: "2 h",
     prix: 25,
-    image: "images/a06.svg",
+    image: "images/a06.webp",
     alt: "Assiette en céramique décorée de motifs colorés",
     accroche: "Décorez une pièce de céramique avec des motifs colorés.",
     description: "Cet atelier de peinture sur céramique est animé par une artisane de Nabeul. Vous choisissez une assiette ou une tuile, puis vous la décorez avec des motifs traditionnels. Les couleurs et les pinceaux sont fournis. La pièce est cuite ensuite par l'atelier et vous pourrez la récupérer quelques jours plus tard."
